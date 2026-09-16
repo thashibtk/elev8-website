@@ -1,69 +1,507 @@
-import Image from "next/image";
+import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Modals from '@/components/Modals';
+import Loading from '@/components/Loading';
+import BmiSection from '@/components/BmiSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+
+export const metadata: Metadata = {
+  title: 'Home | Elev8 Fitness Club',
+  description: 'Welcome to Elev8 Fitness Club. Discover premium equipment, world-class trainers, and an exclusive fitness community designed for real results.',
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="counter-scroll">
+      <Loading />
+
+      <div className="wrapper">
+        <Header />
+        
+        {/* hero */}
+        <div className="section-hero-2">
+            <div className="tf-container w1778">
+                <div className="wrap">
+                    <div className="text-bg text-anime">Elevate Your Journey</div>
+                    <div className="left">
+                        <div className="text h4 mb-30 wow fadeInUp">we are dedicated to helping you achieve your fitness goals in a safe, motivating environment for men and women alike.</div>
+                        <a href="contact" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".1s">Visit Us Today</a>
+                        <div className="text h4 mb-20 wow fadeInUp" data-wow-delay=".2s">the only premium fitness center in the region</div>
+                        <div className="list-text wow fadeInUp" data-wow-delay=".3s">
+                            <div className="text-item">Cardio</div>
+                            <div className="text-item">Strength</div>
+                            <div className="text-item">CrossFit</div>
+                        </div>
+                    </div>
+                    <div className="image tf-animate-2">
+                        <img src="/image/home/hero1.png" alt="image" className="" />
+                    </div>
+                    <div className="right">
+                        <div className="wg-video wow fadeInRight">
+                            <img src="/image/home/video.webp" alt="image" />
+                            <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552852/reel2_k2lxou.mp4" className="popup-youtube">
+                                <i className="icon icon-play"></i>
+                                <div className="wave"></div>
+                                <div className="wave"></div>
+                                <div className="wave"></div>
+                            </a>
+                        </div>
+                        <div className="text h4 mb-20 wow fadeInUp" data-wow-delay=".1s">"Every rep, every drop of sweat, brings you closer to the strongest version of yourself."</div>
+                        <div className="avatar wow fadeInUp" data-wow-delay=".2s">
+                            <div className="name">Elev8 Fitness Club</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        {/* /hero */}
+
+        <div className="main-content">
+
+            {/* section-about-fitness */}
+            <section className="tf-spacing-1 section-about-fitness">
+                <div className="heading-section position-relative z-5">
+                    <div className="tf-container">
+                        <div className="row">
+                            <div className="col-md-3 col-xl-6">
+                                <div className="text-1 text-uppercase box-gradient-2 title text-Title text-anime">about fitness center</div>
+                            </div>
+                            <div className="col-md-9 col-xl-6">
+                                <div className="text-color-change">
+                                    <h2 className="text-uppercase text">
+                                        we provide the perfect environment to achieve health & fitness goals.
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="tf-container w1778">
+                    <div className="swiper tf-swiper" data-swiper={`{
+                        "slidesPerView": 1,
+                        "spaceBetween": 30,
+                        "pagination": { "el": ".sw-pagination-team", "clickable": true },
+                        "breakpoints": {
+                            "767": { "slidesPerView": 2, "slidesPerGroup": 1},
+                            "1150": { "slidesPerView": 4, "slidesPerGroup": 1}
+                            }
+                        }`}>
+                        <div className="swiper-wrapper">
+                            <div className="swiper-slide">
+                                <Link href="/services/personal-training" className="features-item style-2 wow fadeInUp">
+                                    <div className="image">
+                                        <img src="/image/home/personal.webp" alt="image" />
+                                    </div>
+                                    <div className="icon">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M25 0C11.1932 0 0 11.1932 0 25C0 38.8068 11.1932 50 25 50C38.8068 50 50 38.8068 50 25C50 11.1932 38.8068 0 25 0ZM25 45.8333C13.4943 45.8333 4.1667 36.5057 4.1667 25C4.1667 13.4943 13.4943 4.1667 25 4.1667C36.5057 4.1667 45.8333 13.4943 45.8333 25C45.8333 36.5057 36.5057 45.8333 25 45.8333Z" fill="#DEFB02"/>
+                                            <path d="M36.8899 13.1102C36.0763 12.2966 34.7572 12.2966 33.9436 13.1102L29.2321 17.8217C27.9915 17.0888 26.5454 16.6666 25 16.6666C23.4546 16.6666 22.0086 17.0888 20.768 17.8217L16.0565 13.1102C15.2429 12.2966 13.9238 12.2966 13.1102 13.1102C12.2966 13.9238 12.2966 15.2429 13.1102 16.0565L17.8217 20.768C17.0888 22.0085 16.6666 23.4546 16.6666 25C16.6666 26.5454 17.0888 27.9914 17.8217 29.2321L13.1102 33.9436C12.2966 34.7572 12.2966 36.0763 13.1102 36.8899C13.9238 37.7034 15.2429 37.7034 16.0565 36.8899L20.768 32.1783C22.0085 32.9113 23.4546 33.3334 25 33.3334C26.5454 33.3334 27.9914 32.9113 29.2321 32.1783L33.9436 36.8899C34.7572 37.7034 36.0763 37.7034 36.8899 36.8899C37.7034 36.0763 37.7034 34.7572 36.8899 33.9436L32.1783 29.2321C32.9113 27.9915 33.3334 26.5454 33.3334 25C33.3334 23.4546 32.9114 22.0086 32.1783 20.768L36.8899 16.0565C37.7034 15.2429 37.7034 13.9239 36.8899 13.1102ZM22.8239 28.5536C22.7274 28.239 22.5555 27.9425 22.3065 27.6935C22.0574 27.4445 21.761 27.2727 21.4463 27.176C21.0576 26.5426 20.8333 25.7976 20.8333 24.9999C20.8333 24.2023 21.0577 23.4573 21.4463 22.8239C21.761 22.7273 22.0574 22.5554 22.3065 22.3064C22.5555 22.0573 22.7273 21.7609 22.8239 21.4462C23.4573 21.0575 24.2024 20.8332 25 20.8332C25.7977 20.8332 26.5427 21.0576 27.1761 21.4462C27.2727 21.7609 27.4446 22.0573 27.6936 22.3064C27.9426 22.5554 28.2391 22.7272 28.5537 22.8239C28.9424 23.4573 29.1667 24.2023 29.1667 24.9999C29.1667 25.7976 28.9423 26.5426 28.5537 27.176C28.2391 27.2726 27.9426 27.4445 27.6936 27.6935C27.4446 27.9425 27.2728 28.239 27.1761 28.5536C26.5427 28.9423 25.7977 29.1666 25 29.1666C24.2024 29.1666 23.4573 28.9423 22.8239 28.5536Z" fill="#DEFB02"/>
+                                        </svg>
+                                    </div>
+                                    <div className="h3 title">personal training</div>
+                                    <p className="text">One-on-one guidance from certified trainers, with programs built around your specific fitness and diet goals.</p>
+                                </Link>
+                            </div>
+                            <div className="swiper-slide">
+                                <Link href="/services/cardio-training" className="features-item style-2 wow fadeInUp" data-wow-delay=".1s">
+                                    <div className="image">
+                                        <img src="/image/home/cardio.webp" alt="image" />
+                                    </div>
+                                    <div className="icon">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M25 0C11.2142 0 0 11.2165 0 25C0 38.7835 11.2142 50 25 50C38.7858 50 50 38.7835 50 25C50 11.2165 38.7858 0 25 0ZM25 47.6182C12.5277 47.6182 2.38175 37.4707 2.38175 25C2.38175 12.5293 12.5277 2.38175 25 2.38175C37.4723 2.38175 47.6182 12.5293 47.6182 25C47.6182 37.4707 37.4723 47.6182 25 47.6182Z" fill="#DEFB02"/>
+                                            <path d="M31.8437 22.6183H18.1565V27.3818H31.8437V22.6183Z" fill="#DEFB02"/>
+                                            <path d="M8.93022 21.2783V21.7621C8.7511 21.6527 8.55478 21.5777 8.33285 21.5777C7.67531 21.5777 7.14355 22.1104 7.14355 22.7669V27.233C7.14355 27.8895 7.67531 28.4221 8.33285 28.4221C8.55478 28.4221 8.7511 28.3472 8.93022 28.2378V28.7216C8.93022 29.9348 9.84005 30.9244 11.013 31.0718V18.9281C9.84005 19.0755 8.93022 20.0651 8.93022 21.2783Z" fill="#DEFB02"/>
+                                            <path d="M41.6673 21.5777C41.4454 21.5777 41.2491 21.6527 41.0701 21.7621V21.2783C41.0701 20.0651 40.1601 19.0755 38.9873 18.9281V31.0721C40.1603 30.9246 41.0701 29.9351 41.0701 28.722V28.2381C41.2492 28.3476 41.4456 28.4225 41.6673 28.4225C42.3248 28.4225 42.8566 27.8899 42.8566 27.2334V22.7672C42.8566 22.1104 42.3248 21.5777 41.6673 21.5777Z" fill="#DEFB02"/>
+                                            <path d="M14.5839 15.1813C13.2703 15.1813 12.2039 16.2478 12.2039 17.5629V32.4371C12.2039 33.7522 13.2705 34.8186 14.5839 34.8186C15.8989 34.8186 16.9656 33.7522 16.9656 32.4371V17.5629C16.9656 16.2478 15.8989 15.1813 14.5839 15.1813Z" fill="#DEFB02"/>
+                                            <path d="M35.4162 15.1813C34.1011 15.1813 33.0344 16.2478 33.0344 17.5629V32.4371C33.0344 33.7522 34.1011 34.8186 35.4162 34.8186C36.7297 34.8186 37.7962 33.7522 37.7962 32.4371V17.5629C37.7962 16.2478 36.7297 15.1813 35.4162 15.1813Z" fill="#DEFB02"/>
+                                        </svg>
+                                    </div>
+                                    <div className="h3 title">cardio & strength</div>
+                                    <p className="text">Dedicated cardio and strength setups with imported, high-quality machines to build endurance and raw power.</p>
+                                </Link>
+                            </div>
+                            <div className="swiper-slide">
+                                <Link href="/services/crossfit-workouts" className="features-item style-2 wow fadeInUp" data-wow-delay=".2s">
+                                    <div className="image">
+                                        <img src="/image/home/crossfit.webp" alt="image" />
+                                    </div>
+                                    <div className="icon">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M47.9167 38.5417H45.2517L44.1984 35.382C47.6359 33.6801 50.0001 30.1372 50.0001 26.0417C50.0001 21.0026 46.4212 16.799 41.6668 15.8336V11.1962C45.2623 10.2719 47.9168 7.0104 47.9168 3.12505C47.9168 1.97446 46.9841 1.04175 45.8335 1.04175C44.6827 1.04175 43.75 1.97446 43.75 3.12505C43.75 4.69702 42.882 6.06333 41.5989 6.773C41.3681 5.87388 40.5545 5.20845 39.5833 5.20845C38.4327 5.20845 37.5 6.14116 37.5 7.29175V15.8336C33.2926 16.6878 30.0064 20.0784 29.3059 24.3396L13.815 27.782L9.25625 15.625H10.4167C11.5673 15.625 12.5 14.6923 12.5 13.5417C12.5 12.3912 11.5673 11.4584 10.4167 11.4584H6.26338C6.24834 11.4583 6.2333 11.4583 6.21826 11.4584H2.0833C0.932715 11.4583 0 12.3912 0 13.5417C0 14.6923 0.932715 15.625 2.0833 15.625H4.80625L10.3405 30.3831L8.70879 38.5417H2.0833C0.932715 38.5417 0 39.4745 0 40.625V46.875C0 48.0256 0.932715 48.9584 2.0833 48.9584H47.9166C49.0672 48.9584 49.9999 48.0256 49.9999 46.875V40.625C50 39.4745 49.0673 38.5417 47.9167 38.5417ZM39.5833 19.7917C43.0348 19.7917 45.8333 22.5903 45.8333 26.0417C45.8333 29.4932 43.0348 32.2917 39.5833 32.2917C36.1318 32.2917 33.3333 29.4932 33.3333 26.0417C33.3333 22.5903 36.1318 19.7917 39.5833 19.7917ZM22.8239 28.5536C22.7274 28.239 22.5555 27.9425 22.3065 27.6935C22.0574 27.4445 21.761 27.2727 21.4463 27.176C21.0576 26.5426 20.8333 25.7976 20.8333 24.9999C20.8333 24.2023 21.0577 23.4573 21.4463 22.8239C21.761 22.7273 22.0574 22.5554 22.3065 22.3064C22.5555 22.0573 22.7273 21.7609 22.8239 21.4462C23.4573 21.0575 24.2024 20.8332 25 20.8332C25.7977 20.8332 26.5427 21.0576 27.1761 21.4462C27.2727 21.7609 27.4446 22.0573 27.6936 22.3064C27.9426 22.5554 28.2391 22.7272 28.5537 22.8239C28.9424 23.4573 29.1667 24.2023 29.1667 24.9999C29.1667 25.7976 28.9423 26.5426 28.5537 27.176C28.2391 27.2726 27.9426 27.4445 27.6936 27.6935C27.4446 27.9425 27.2728 28.239 27.1761 28.5536C26.5427 28.9423 25.7977 29.1666 25 29.1666C24.2024 29.1666 23.4573 28.9423 22.8239 28.5536Z" fill="#DEFB02"/>
+                                        </svg>
+                                    </div>
+                                    <div className="h3 title">crossfit workouts</div>
+                                    <p className="text">High-intensity functional movement programs designed to improve overall conditioning and agility.</p>
+                                </Link>
+                            </div>
+                            <div className="swiper-slide">
+                                <Link href="/services/diet-weight-control" className="features-item style-2 wow fadeInUp" data-wow-delay=".3s">
+                                    <div className="image">
+                                        <img src="/image/home/diet.webp" alt="image" />
+                                    </div>
+                                    <div className="icon">
+                                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M47.8119 10.164L41.9202 4.27227C41.1066 3.45869 39.7875 3.45869 38.9739 4.27227C38.1603 5.08584 38.1603 6.40498 38.9739 7.21855L40.4462 8.69082L37.0013 12.1356C34.1426 10.1175 30.7532 8.80098 27.0833 8.43662V4.1667H29.1666C30.3172 4.1667 31.2499 3.23398 31.2499 2.0834C31.25 0.932715 30.3173 0 29.1667 0H20.8334C19.6827 0 18.75 0.932715 18.75 2.0833C18.75 3.23389 19.6827 4.1666 20.8333 4.1666H22.9166V8.43662C19.2467 8.80098 15.8574 10.1175 12.9985 12.1356L9.55378 8.69082L11.026 7.21855C11.8396 6.40498 11.8396 5.08584 11.026 4.27227C10.2125 3.45869 8.89333 3.45869 8.07976 4.27227L2.18806 10.164C1.37449 10.9775 1.37449 12.2967 2.18806 13.1103C3.00164 13.9238 4.32078 13.9238 5.13435 13.1103L6.6075 11.6371L9.84382 14.8734C6.32449 18.6039 4.16667 23.6328 4.16667 29.1667C4.16667 40.6735 13.4931 50 25 50C36.5068 50 45.8333 40.6735 45.8333 29.1667C45.8333 23.6328 43.6755 18.6039 40.1561 14.8734L43.3925 11.6371L44.8656 13.1103C45.6792 13.9238 46.9983 13.9238 47.8119 13.1103C48.6255 12.2966 48.6255 10.9775 47.8119 10.164ZM25 45.8333C15.7943 45.8333 8.33328 38.3723 8.33328 29.1666C8.33328 19.9609 15.7943 12.5 25 12.5C34.2056 12.5 41.6667 19.961 41.6667 29.1667C41.6667 38.3724 34.2056 45.8333 25 45.8333Z" fill="#DEFB02"/>
+                                            <path d="M27.0833 23.2736V18.75C27.0833 17.5995 26.1506 16.6667 25 16.6667C23.8494 16.6667 22.9167 17.5995 22.9167 18.75V23.2736C20.4891 24.1314 18.75 26.4448 18.75 29.1667C18.75 32.6194 21.5474 35.4167 25 35.4167C28.4526 35.4167 31.25 32.6194 31.25 29.1667C31.25 26.4448 29.5109 24.1314 27.0833 23.2736ZM25 31.25C23.8485 31.25 22.9167 30.3182 22.9167 29.1667C22.9167 28.0153 23.8485 27.0834 25 27.0834C26.1515 27.0834 27.0833 28.0153 27.0833 29.1667C27.0833 30.3182 26.1515 31.25 25 31.25Z" fill="#DEFB02"/>
+                                        </svg>
+                                    </div>
+                                    <div className="h3 title">diet & weight control</div>
+                                    <p className="text">Customized nutritional guidance from our experts to help you manage body composition effectively.</p>
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="sw-pagination-team sw-pagination d-xl-none justify-content-center mt-15"></div>
+                    </div>
+                </div>
+            </section>
+            {/* /section-about-fitness */}
+
+            {/* section-about-gym */}
+            <section className="section-about-gym">
+                <div className="tf-container w1778">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="left">
+                                <div className="text-1 text-uppercase box-gradient-2 sub-title text-Title text-anime">about elev8 fitness club</div>
+                                <div className="text-color-change title">
+                                    <h2 className="text-uppercase">
+                                        The only premium fitness center in the region, built for real, world class results.
+                                    </h2>
+                                </div>
+                                <div className="text wow fadeInUp">Elev8 is a unisex gym that welcomes both men and women in a safe, comfortable, and women friendly environment. Equipped with imported, high quality machines for strength, cardio, and functional fitness, our experienced, certified trainers help every member achieve serious results whether your goal is building muscle, losing weight, or improving overall fitness.</div>
+                                <div className="list-text wow fadeInUp" data-wow-delay=".1s">
+                                    <div className="text-item">Imported, High-Quality Equipment</div>
+                                    <div className="text-item">Ladies Special Hours (11 AM – 4 PM)</div>
+                                    <div className="text-item">Personal Training & Diet Plans</div>
+                                    <div className="text-item">Safe, Women-Friendly Environment</div>
+                                    <div className="text-item">Experienced, Certified Trainers</div>
+                                    <div className="text-item">Steam Bath for Recovery</div>
+                                </div>
+                                <a href="about-us" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".2s">learn more about us</a>
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="right wow fadeInUp">
+                                <div className="image">
+                                    <img src="/image/home/about.webp" alt="image" />
+                                </div>
+                                <div className="text">
+                                    "<span className="text-gradient-2">Elevate</span> Your <br /> Fitness <span className="text-gradient-2">Journey</span> Today."
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* /section-about-gym */}
+
+            {/* marquee */}
+            <div className="tf-spacing-4">
+                <div className="tf-marquee marquee-2">
+                    <div className="marquee-wrapper">
+                        <div className="initial-child-container">
+                            <div className="marquee-child-item">
+                                <div className="text">
+                                    <span className="text-Title">ELEV8</span>
+                                    <span className="text-gradient-2">FITNESS</span>
+                                </div>
+                            </div>
+                            <div className="marquee-child-item">
+                                <div className="text">
+                                    <span className="text-Title">ELEV8</span>
+                                    <span className="text-gradient-2">FITNESS</span>
+                                </div>
+                            </div>
+                            <div className="marquee-child-item">
+                                <div className="text">
+                                    <span className="text-Title">ELEV8</span>
+                                    <span className="text-gradient-2">FITNESS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* /marquee */}
+
+            {/* section-provide */}
+            <section className="tf-spacing-1 section-provide">
+                <div className="img-bg">
+                    <img className="parallax-img" src="/image/home/providebg.webp" alt="image" />
+                </div>
+                <div className="heading-section">
+                    <div className="tf-container">
+                        <div className="row">
+                            <div className="col-md-3 col-xl-6">
+                                <div className="text-1 text-uppercase box-gradient-2 title text-Title text-anime">what we provide</div>
+                            </div>
+                            <div className="col-md-9 col-xl-6">
+                                <div className="text-color-change-white text-top">
+                                    <h2 className="text-uppercase text">
+                                        we provide everything you need to achieve your
+                                        fitness goals & healthy.
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="tf-container">
+                    <div className="row rg-30">
+                        <div className="col-md-4">
+                            <div className="provide-item wow fadeInUp">
+                                <img className="image" src="/image/home/provide-personal.webp" alt="image" />
+                                <div className="icon">
+                                    <svg width="50" height="50" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.436625 27.777C-0.147658 28.3643 -0.145224 29.314 0.442061 29.8983C1.02935 30.4826 1.97909 30.4802 2.56337 29.8929L1.5 28.835L0.436625 27.777ZM25.0747 1.71089L25.4777 0.266052V0.266052L25.0747 1.71089ZM31.0415 3.37534L31.4446 1.9305V1.9305L31.0415 3.37534ZM33.6169 5.08519L32.4517 6.02976L32.4517 6.02976L33.6169 5.08519ZM47.9953 27.3024L46.63 27.9237L46.63 27.9237L47.9953 27.3024ZM18.1074 5.36938L17.0042 4.35303V4.35303L18.1074 5.36938ZM23.7019 13.3459L23.4576 11.866V11.866L23.7019 13.3459ZM30.8371 16.6422L32.0269 15.7288L32.0269 15.7288L30.8371 16.6422ZM33.2816 25.5847L31.7907 25.7498V25.7498L33.2816 25.5847ZM35.1591 30.4219L34.3169 31.6632C34.9473 32.0908 35.7982 31.9781 36.2954 31.401C36.7927 30.8239 36.7784 29.9658 36.2623 29.4055L35.1591 30.4219ZM15.8577 32.3027C15.3443 32.9528 15.4552 33.8961 16.1053 34.4095C16.7555 34.9229 17.6988 34.812 18.2122 34.1619L17.035 33.2323L15.8577 32.3027ZM15.5179 9.91596L14.0402 10.1736V10.1736L15.5179 9.91596ZM50.9454 40.5097L52.3386 41.0656V41.0656L50.9454 40.5097ZM40.3408 47.1142L40.81 48.539V48.539L40.3408 47.1142ZM27.6525 13.0603L28.2236 11.6733L28.2236 11.6733L27.6525 13.0603ZM22.0112 47.4981L23.0881 48.5423L23.0881 48.5423L22.0112 47.4981ZM2.60322 46.268C2.04192 45.6587 1.09297 45.6198 0.483677 46.1811C-0.125613 46.7424 -0.164517 47.6914 0.396783 48.3007L1.5 47.2843L2.60322 46.268ZM22.4489 46.8863L22.9951 45.4893C22.3105 45.2216 21.5327 45.4895 21.1582 46.1221L22.4489 46.8863ZM22.3631 47.0312L21.0724 46.267L21.0724 46.2671L22.3631 47.0312ZM23.4512 28.5711L23.9096 29.9993V29.9993L23.4512 28.5711ZM25.0747 1.71089L24.6717 3.15573L30.6385 4.82018L31.0415 3.37534L31.4446 1.9305L25.4777 0.266052L25.0747 1.71089ZM33.6169 5.08519L32.4517 6.02976C38.9282 14.0193 43.0914 20.1489 46.63 27.9237L47.9953 27.3024L49.3605 26.681C45.6783 18.5907 41.348 12.2404 34.7821 4.14061L33.6169 5.08519ZM33.2816 25.5847L31.7907 25.7498C32.0016 27.6546 32.6142 29.8734 34.0559 31.4382L35.1591 30.4219L36.2623 29.4055C35.4503 28.5242 34.9536 27.0549 34.7725 25.4196L33.2816 25.5847ZM30.8371 16.6422L29.6473 17.5557C30.1366 18.193 30.4819 18.643 30.7251 18.9809C30.9899 19.3488 31.0431 19.4632 31.0407 19.4573L32.4347 18.9034L33.8287 18.3495C33.6779 17.97 33.4153 17.583 33.1599 17.2283C32.883 16.8436 32.5037 16.3498 32.0269 15.7288L30.8371 16.6422ZM33.2816 25.5847L34.7725 25.4196C34.5402 23.3215 34.3644 21.7335 34.228 20.6243C34.16 20.0707 34.0999 19.6207 34.0457 19.2789C34.0019 19.0027 33.9388 18.6267 33.8287 18.3495L32.4347 18.9034L31.0407 19.4573C31.0048 19.3669 31.0265 19.3939 31.0827 19.7484C31.1285 20.0374 31.1835 20.4458 31.2504 20.9903C31.384 22.0771 31.5574 23.6429 31.7907 25.7498L33.2816 25.5847ZM18.1074 5.36938L17.0042 4.35303C16.0942 5.34083 15.271 6.22596 14.7396 7.0635C14.1541 7.98645 13.8328 8.98392 14.0402 10.1736L15.5179 9.91596L16.9956 9.65828C16.9486 9.38845 16.974 9.14164 17.2728 8.6707C17.6258 8.11434 18.2246 7.45595 19.2106 6.38573L18.1074 5.36938ZM47.9953 27.3024L46.63 27.9237C48.1106 31.1768 49.1413 33.4527 49.653 35.3572C50.1422 37.1782 50.1192 38.5329 49.5522 39.9538L50.9454 40.5097L52.3386 41.0656C53.2016 38.9027 53.1635 36.8616 52.5502 34.5788C51.9594 32.3795 50.8 29.8437 49.3605 26.681L47.9953 27.3024ZM40.3408 47.1142L40.81 48.539C43.8142 47.5498 46.2688 46.7483 48.1306 45.711C50.0896 44.6197 51.4762 43.2271 52.3386 41.0656L50.9454 40.5097L49.5522 39.9538C48.9848 41.376 48.1272 42.2788 46.6706 43.0903C45.1167 43.9559 42.9839 44.6648 39.8717 45.6895L40.3408 47.1142ZM23.7019 13.3459L23.9463 14.8259C25.0744 14.6397 25.8401 14.5142 26.4059 14.4618C27.0079 14.4061 27.1251 14.4653 27.0814 14.4474L27.6525 13.0603L28.2236 11.6733C27.5444 11.3936 26.7912 11.4133 26.1293 11.4746C25.4312 11.5392 24.5394 11.6874 23.4576 11.866L23.7019 13.3459ZM22.0112 47.4981L20.9343 46.454C18.6507 48.8092 15.2239 50.0319 11.7209 49.9994C8.21822 49.9669 4.82651 48.6814 2.60322 46.268L1.5 47.2843L0.396783 48.3007C3.28529 51.4361 7.52845 52.9606 11.6931 52.9992C15.8573 53.0379 20.1302 51.5931 23.0881 48.5423L22.0112 47.4981ZM40.3408 47.1142L39.8717 45.6895C33.9736 47.6314 28.9417 47.8142 22.9951 45.4893L22.4489 46.8863L21.9027 48.2833C28.6005 50.902 34.3604 50.6625 40.81 48.539L40.3408 47.1142ZM22.3631 47.0312L23.6539 47.7954L23.7397 47.6505L22.4489 46.8863L21.1582 46.1221L21.0724 46.267L22.3631 47.0312ZM22.0112 47.4981L23.0881 48.5423C23.3189 48.3043 23.5043 48.048 23.6539 47.7954L22.3631 47.0312L21.0724 46.2671C21.0227 46.351 20.9754 46.4115 20.9342 46.454L22.0112 47.4981ZM35.1591 30.4219L36.0012 29.1806C33.4197 27.4293 28.2755 25.4472 22.9927 27.1428L23.4512 28.5711L23.9096 29.9993C28.022 28.6793 32.2031 30.2291 34.3169 31.6632L35.1591 30.4219ZM23.4512 28.5711L22.9927 27.1428C20.4826 27.9485 18.0198 29.5647 15.8577 32.3027L17.035 33.2323L18.2122 34.1619C20.0264 31.8644 21.9994 30.6124 23.9096 29.9993L23.4512 28.5711ZM23.4512 28.5711L24.4804 27.4798C21.3182 24.4973 16.791 23.101 12.3949 23.1482C7.99908 23.1953 3.50936 24.6885 0.436625 27.777L1.5 28.835L2.56337 29.8929C4.95725 27.4867 8.62368 26.1888 12.4271 26.148C16.2302 26.1072 19.9453 27.3263 22.422 29.6623L23.4512 28.5711ZM27.6525 13.0603L27.0814 14.4474C27.3738 14.5678 27.745 14.8932 28.2285 15.5333C28.4572 15.836 28.6771 16.1613 28.9138 16.5125C29.1403 16.8485 29.3918 17.2228 29.6473 17.5557L30.8371 16.6422L32.0269 15.7288C31.8387 15.4836 31.6413 15.1916 31.4014 14.8357C31.1718 14.495 30.9077 14.1028 30.6223 13.725C30.0777 13.0041 29.3004 12.1166 28.2236 11.6733L27.6525 13.0603ZM31.0415 3.37534L30.6385 4.82018C31.4819 5.05545 31.6018 5.10888 31.6853 5.16437C31.7763 5.22488 31.8829 5.32809 32.4517 6.02976L33.6169 5.08519L34.7821 4.14061C34.3254 3.57724 33.9055 3.03787 33.3459 2.66589C32.7787 2.2889 32.1236 2.11992 31.4446 1.9305L31.0415 3.37534ZM25.0747 1.71089L25.4777 0.266052C23.3239 -0.334778 21.6337 0.136994 20.2334 1.12781C18.9966 2.00288 17.9067 3.37341 17.0042 4.35303L18.1074 5.36938L19.2106 6.38573C20.3618 5.13615 21.0736 4.20825 21.9661 3.57679C22.695 3.06106 23.4616 2.81819 24.6717 3.15573L25.0747 1.71089ZM15.5179 9.91596L14.0402 10.1736C14.4623 12.5943 16.639 13.8135 18.4511 14.3771C20.3415 14.9651 22.4884 15.0666 23.9463 14.8259L23.7019 13.3459L23.4576 11.866C22.4725 12.0286 20.7978 11.9653 19.3421 11.5125C17.808 11.0354 17.1141 10.338 16.9956 9.65828L15.5179 9.91596Z" fill="#DEFB02"/>
+                                    </svg>
+                                </div>
+                                <Link href="/services/personal-training" className="h3 d-flex link title">Personal Training</Link>
+                                <p className="text">One-on-one guidance from expert trainers with programs customized around your goals and diet plan.</p>
+                                <Link href="/services/personal-training" className="tf-btn style-2 text-uppercase">Read more</Link>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="provide-item wow fadeInUp" data-wow-delay=".1s">
+                                <img className="image" src="/image/home/provide-diet.webp" alt="image" />
+                                <div className="icon">
+                                    <svg width="50" height="50" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M51.5 11.5C51.5 14 49 19 39 19C29 19 26.5 14 26.5 11.5C26.5 14 24 19 14 19C4 19 1.5 14 1.5 11.5" stroke="#DEFB02" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M21.5 5.25C20.6667 4 17.75 1.5 14 1.5M31.5 5.25C32.3333 4 35.25 1.5 39 1.5" stroke="#DEFB02" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M6.5 19V21.5C6.5 24.8007 7.16506 28.0494 7.90022 31.2486C9.24851 37.1161 9.92333 45.4514 6.5 51.5M46.5 19V21.5C46.5 24.8007 45.8349 28.0494 45.0998 31.2486C43.7515 37.1161 43.0767 45.4514 46.5 51.5" stroke="#DEFB02" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M36.5 44C32.7876 46.9475 30.6099 47.4226 27.3073 44.7059C26.8315 44.3146 26.1454 44.2874 25.6484 44.6513C22.1606 47.2048 19.9986 47.2277 16.5 44" stroke="#DEFB02" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M36.5 31.5C32.7876 34.4475 30.6099 34.9226 27.3073 32.2059C26.8315 31.8146 26.1454 31.7874 25.6484 32.1513C22.1606 34.7048 19.9986 34.7277 16.5 31.5" stroke="#DEFB02" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M26.5 31.5V26.5" stroke="#DEFB02" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                                    </svg>
+                                </div>
+                                <Link href="/services/diet-weight-control" className="h3 d-flex link title">Diet & Weight Control</Link>
+                                <p className="text">Customized nutritional structuring and guidance to help you manage body composition effectively.</p>
+                                <Link href="/services/diet-weight-control" className="tf-btn style-2 text-uppercase">Read more</Link>
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="provide-item wow fadeInUp" data-wow-delay=".2s">
+                                <img className="image" src="/image/home/provide-crossfit.webp" alt="image" />
+                                <div className="icon">
+                                    <svg width="51" height="50" viewBox="0 0 51 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.2456 10.25C15.2456 15.0825 19.7228 19 25.2456 19C30.7685 19 35.2456 15.0825 35.2456 10.25C35.2456 5.41751 30.7685 1.5 25.2456 1.5C19.7228 1.5 15.2456 5.41751 15.2456 10.25Z" stroke="#DEFB02" strokeWidth="3"/>
+                                        <path d="M2.88155 34.1287L4.37094 34.3068V34.3068L2.88155 34.1287ZM10.1184 34.1287L11.6078 33.9505V33.9505L10.1184 34.1287ZM10.5524 30.9345L11.9361 31.5138V31.5138L10.5524 30.9345ZM11.4879 45.6774L9.99042 45.7651V45.7651L11.4879 45.6774ZM1.51215 45.6774L0.0147179 45.5897V45.5897L1.51215 45.6774ZM2.44756 30.9345L1.06392 31.5138L1.06392 31.5138L2.44756 30.9345ZM1.68168 27.6463L0.353309 26.9495L0.349466 26.9569L1.68168 27.6463ZM11.3183 27.6463L12.6506 26.9569L12.6467 26.9495L11.3183 27.6463ZM4.99781 26.5C4.99781 27.3284 5.66938 28 6.49781 28C7.32623 28 7.99781 27.3284 7.99781 26.5H6.49781H4.99781ZM25.2478 3C26.0762 3 26.7478 2.32843 26.7478 1.5C26.7478 0.671573 26.0762 0 25.2478 0V1.5V3ZM9.04857 8.09716C8.55095 8.75948 8.68447 9.6998 9.34679 10.1974C10.0091 10.695 10.9494 10.5615 11.447 9.89918L10.2478 8.99817L9.04857 8.09716ZM8.61779 15.6491C8.83819 14.8505 8.36949 14.0245 7.57093 13.8041C6.77236 13.5837 5.94631 14.0524 5.72591 14.8509L7.17185 15.25L8.61779 15.6491ZM2.44756 30.9345L1.06392 31.5138C1.40461 32.3276 1.46566 32.5082 1.48812 32.6735C1.51137 32.8446 1.49987 33.0501 1.39217 33.9506L2.88155 34.1287L4.37094 34.3068C4.46179 33.5473 4.54723 32.9056 4.46081 32.2696C4.3736 31.6277 4.11838 31.0413 3.83121 30.3553L2.44756 30.9345ZM10.1184 34.1287L11.6078 33.9505C11.5001 33.0501 11.4886 32.8446 11.5119 32.6735C11.5343 32.5082 11.5954 32.3276 11.9361 31.5138L10.5524 30.9345L9.16879 30.3553C8.88162 31.0413 8.62641 31.6277 8.53919 32.2696C8.45278 32.9056 8.53821 33.5473 8.62906 34.3068L10.1184 34.1287ZM11.4879 45.6774L12.9853 45.5897C12.7565 41.684 12.0506 37.6522 11.6078 33.9505L10.1184 34.1287L8.62906 34.3068C9.10043 38.2477 9.76797 41.9684 9.99042 45.7651L11.4879 45.6774ZM2.88155 34.1287L1.39217 33.9506C0.94941 37.6522 0.243546 41.684 0.0147179 45.5897L1.51215 45.6774L3.00958 45.7651C3.23203 41.9684 3.89958 38.2477 4.37094 34.3068L2.88155 34.1287ZM6.5 51.5V50C4.66958 50 2.85103 48.4714 3.00958 45.7651L1.51215 45.6774L0.0147179 45.5897C-0.240109 49.9391 2.86494 53 6.5 53V51.5ZM6.5 51.5V53C10.1351 53 13.2401 49.9391 12.9853 45.5897L11.4879 45.6774L9.99042 45.7651C10.149 48.4714 8.33042 50 6.5 50V51.5ZM1.68168 27.6463L3.01003 28.343C2.85563 28.6374 2.66595 28.6631 2.88676 28.5606C3.04277 28.4882 3.30513 28.3995 3.68139 28.3138C4.42579 28.1443 5.42065 28.0303 6.45193 28.0052C7.48674 27.98 8.47742 28.0465 9.22296 28.1997C9.59802 28.2767 9.85506 28.3646 10.0084 28.4401C10.1838 28.5265 10.0867 28.5275 9.98997 28.343L11.3183 27.6463L12.6467 26.9495C12.3223 26.3311 11.7748 25.9659 11.3335 25.7486C10.8701 25.5205 10.3443 25.3674 9.82673 25.2611C8.78708 25.0475 7.55395 24.9775 6.37903 25.0061C5.20059 25.0347 3.99981 25.1645 3.01537 25.3886C2.52722 25.4998 2.04186 25.6453 1.62344 25.8396C1.26981 26.0038 0.67899 26.3287 0.353329 26.9495L1.68168 27.6463ZM2.44756 30.9345L3.83121 30.3553C3.73147 30.117 3.58129 29.8063 3.47588 29.5781C3.35544 29.3173 3.2492 29.0733 3.1689 28.8429C3.08684 28.6074 3.0509 28.4386 3.0425 28.3286C3.03431 28.2215 3.05805 28.2503 3.01389 28.3356L1.68168 27.6463L0.349466 26.9569C-0.205948 28.0303 0.11405 29.1932 0.335985 29.8301C0.465245 30.201 0.620598 30.5507 0.752343 30.836C0.89912 31.1537 0.991723 31.3413 1.06392 31.5138L2.44756 30.9345ZM10.5524 30.9345L11.9361 31.5138C12.0083 31.3413 12.1009 31.1537 12.2477 30.836C12.3794 30.5507 12.5348 30.201 12.664 29.8301C12.886 29.1932 13.2059 28.0303 12.6505 26.9569L11.3183 27.6463L9.9861 28.3356C9.94195 28.2503 9.96569 28.2215 9.9575 28.3286C9.94909 28.4386 9.91316 28.6074 9.8311 28.8429C9.7508 29.0733 9.64456 29.3173 9.52412 29.578C9.41871 29.8063 9.26853 30.117 9.16879 30.3553L10.5524 30.9345ZM6.49781 20.25H4.99781V26.5H6.49781H7.99781V20.25H6.49781ZM25.2478 1.5V0C18.6227 0 12.7406 3.18316 9.04857 8.09716L10.2478 8.99817L11.447 9.89918C14.5968 5.70692 19.606 3 25.2478 3V1.5ZM7.17185 15.25L5.72591 14.8509C5.25104 16.5715 4.99781 18.3824 4.99781 20.25H6.49781H7.99781C7.99781 18.6546 8.21399 17.1121 8.61779 15.6491L7.17185 15.25Z" fill="#DEFB02"/>
+                                        <path d="M40.3859 34.1287L41.8753 34.3068V34.3068L40.3859 34.1287ZM47.6228 34.1287L49.1122 33.9505V33.9505L47.6228 34.1287ZM48.0568 30.9345L49.4405 31.5138V31.5138L48.0568 30.9345ZM48.9922 45.6774L47.4948 45.7651V45.7651L48.9922 45.6774ZM39.0165 45.6774L37.5191 45.5897V45.5897L39.0165 45.6774ZM39.952 30.9345L38.5683 31.5138L38.5683 31.5138L39.952 30.9345ZM39.1861 27.6463L37.8577 26.9495L37.8539 26.9569L39.1861 27.6463ZM48.8227 27.6463L50.155 26.9569L50.1511 26.9495L48.8227 27.6463ZM42.5 26.5C42.5 27.3284 43.1716 28 44 28C44.8284 28 45.5 27.3284 45.5 26.5H44H42.5ZM25.25 0C24.4216 0 23.75 0.671573 23.75 1.5C23.75 2.32843 24.4216 3 25.25 3V1.5V0ZM39.952 30.9345L38.5683 31.5138C38.909 32.3276 38.9701 32.5082 38.9925 32.6735C39.0158 32.8446 39.0043 33.0501 38.8966 33.9506L40.3859 34.1287L41.8753 34.3068C41.9662 33.5473 42.0516 32.9056 41.9652 32.2696C41.878 31.6277 41.6228 31.0413 41.3356 30.3553L39.952 30.9345ZM47.6228 34.1287L49.1122 33.9505C49.0045 33.0501 48.993 32.8446 49.0163 32.6735C49.0387 32.5082 49.0998 32.3276 49.4405 31.5138L48.0568 30.9345L46.6732 30.3553C46.386 31.0413 46.1308 31.6277 46.0436 32.2696C45.9572 32.9056 46.0426 33.5473 46.1334 34.3068L47.6228 34.1287ZM48.9922 45.6774L50.4897 45.5897C50.2608 41.684 49.555 37.6522 49.1122 33.9505L47.6228 34.1287L46.1334 34.3068C46.6048 38.2477 47.2724 41.9684 47.4948 45.7651L48.9922 45.6774ZM40.3859 34.1287L38.8966 33.9506C38.4538 37.6522 37.7479 41.684 37.5191 45.5897L39.0165 45.6774L40.514 45.7651C40.7364 41.9684 41.404 38.2477 41.8753 34.3068L40.3859 34.1287ZM44.0044 51.5V50C42.174 50 40.3554 48.4714 40.514 45.7651L39.0165 45.6774L37.5191 45.5897C37.2643 49.9391 40.3693 53 44.0044 53V51.5ZM44.0044 51.5V53C47.6394 53 50.7445 49.9391 50.4897 45.5897L48.9922 45.6774L47.4948 45.7651C47.6534 48.4714 45.8348 50 44.0044 50V51.5ZM39.1861 27.6463L40.5144 28.343C40.36 28.6374 40.1703 28.6631 40.3911 28.5606C40.5472 28.4882 40.8095 28.3995 41.1858 28.3138C41.9302 28.1443 42.925 28.0303 43.9563 28.0052C44.9911 27.98 45.9818 28.0465 46.7273 28.1997C47.1024 28.2767 47.3594 28.3646 47.5128 28.4401C47.6881 28.5265 47.5911 28.5275 47.4944 28.343L48.8227 27.6463L50.1511 26.9495C49.8267 26.3311 49.2792 25.9659 48.8379 25.7486C48.3745 25.5205 47.8486 25.3674 47.3311 25.2611C46.2915 25.0475 45.0583 24.9775 43.8834 25.0061C42.705 25.0347 41.5042 25.1645 40.5198 25.3886C40.0316 25.4998 39.5462 25.6453 39.1278 25.8396C38.7742 26.0038 38.1834 26.3287 37.8577 26.9495L39.1861 27.6463ZM39.952 30.9345L41.3356 30.3553C41.2359 30.117 41.0857 29.8063 40.9803 29.5781C40.8598 29.3173 40.7536 29.0733 40.6733 28.8429C40.5912 28.6074 40.5553 28.4386 40.5469 28.3286C40.5387 28.2215 40.5624 28.2503 40.5183 28.3356L39.1861 27.6463L37.8539 26.9569C37.2984 28.0303 37.6184 29.1932 37.8404 29.8301C37.9696 30.201 38.125 30.5507 38.2567 30.836C38.4035 31.1537 38.4961 31.3413 38.5683 31.5138L39.952 30.9345ZM48.0568 30.9345L49.4405 31.5138C49.5127 31.3413 49.6053 31.1537 49.752 30.836C49.8838 30.5507 50.0391 30.201 50.1684 29.8301C50.3903 29.1932 50.7103 28.0303 50.1549 26.9569L48.8227 27.6463L47.4905 28.3356C47.4463 28.2503 47.4701 28.2215 47.4619 28.3286C47.4535 28.4386 47.4175 28.6074 47.3355 28.8429C47.2552 29.0733 47.1489 29.3173 47.0285 29.578C46.9231 29.8063 46.7729 30.117 46.6732 30.3553L48.0568 30.9345ZM44 20.25H42.5V26.5H44H45.5V20.25H44ZM25.25 1.5V3C34.7769 3 42.5 10.7231 42.5 20.25H44H45.5C45.5 9.06623 36.4338 0 25.25 0V1.5Z" fill="#DEFB02"/>
+                                     </svg>
+                                 </div>
+                                 <Link href="/services/crossfit-workouts" className="h3 d-flex link title">CrossFit Workouts</Link>
+                                 <p className="text">High-intensity functional movement sessions to build strength, agility and overall conditioning.</p>
+                                 <Link href="/services/crossfit-workouts" className="tf-btn style-2 text-uppercase">Read more</Link>
+                             </div>
+                         </div>
+
+                    </div>
+                </div>
+            </section>
+            {/* /section-provide */}
+
+            {/* section-photo-gallery */}
+            <section className="tf-spacing-5 section-photo-gallery">
+                <div className="heading-section position-relative z-5">
+                    <div className="tf-container">
+                        <div className="row">
+                            <div className="col-md-3 col-xl-5">
+                                <div className="text-1 text-uppercase box-gradient-2 title text-Title text-anime">photo gallery</div>
+                            </div>
+                            <div className="col-md-9 col-xl-7">
+                                <div className="text-color-change">
+                                    <h2 className="text-uppercase text">
+                                        A Look Inside Elev8, 
+                                        Where Every Workout Tells a Story
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="tf-container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="gallery-item hover-img md-mb-30 wow fadeInUp">
+                                <div className="image">
+                                    <img src="/image/home/strength.webp" alt="image" />
+                                </div>
+                                <a href="portfolio-details" className="h3 title text-uppercase text-Black link">Strength & Conditioning Zone</a>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="swiper tf-swiper mb-40" data-swiper={`{
+                                "slidesPerView": 2,
+                                "spaceBetween": 30,
+                                "speed": 800,
+                                "navigation": {
+                                    "clickable": true,
+                                    "nextEl": ".gallery-next",
+                                    "prevEl": ".gallery-prev"
+                                },
+                                "pagination": { "el": ".sw-pagination-gallery", "clickable": true },
+                                "breakpoints": {
+                                    "767": { "slidesPerView": 2}
+                                }
+                            }`}>
+                                <div className="swiper-wrapper">
+                                    <div className="swiper-slide">
+                                        <a href="portfolio-details" className="gallery-item hover-img wow fadeInUp" data-wow-delay=".1s">
+                                            <div className="image">
+                                                <img src="/image/portfolio/5.webp" alt="image" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="swiper-slide">
+                                        <a href="portfolio-details" className="gallery-item hover-img wow fadeInUp" data-wow-delay=".2s">
+                                            <div className="image">
+                                                <img src="/image/portfolio/14.webp" alt="image" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="swiper-slide">
+                                        <a href="portfolio-details" className="gallery-item hover-img">
+                                            <div className="image">
+                                                <img src="/image/portfolio/13.webp" alt="image" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="swiper-slide">
+                                        <a href="portfolio-details" className="gallery-item hover-img">
+                                            <div className="image">
+                                                <img src="/image/portfolio/16.webp" alt="image" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div className="swiper-slide">
+                                        <a href="portfolio-details" className="gallery-item hover-img">
+                                            <div className="image">
+                                                <img src="/image/portfolio/12.webp" alt="image" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="list-btn flex align-items-center g-10 justify-content-between">
+                                <div className="arrow-btn gallery-prev">
+                                    <i className="icon-arrow-left"></i>
+                                </div>
+                                <div className="sw-pagination-gallery sw-pagination justify-content-center"></div>
+                                <div className="arrow-btn gallery-next">
+                                    <i className="icon-arrow-right"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* /section-photo-gallery */}
+
+            {/* section-timing */}
+            <section className="tf-spacing-1 section-schedule">
+                <div className="heading-section position-relative z-5">
+                    <div className="tf-container">
+                        <div className="row">
+                            <div className="col-md-3 col-xl-5">
+                                <div className="text-1 text-uppercase box-gradient-2 title text-Title text-anime">gym timing</div>
+                            </div>
+                            <div className="col-md-9 col-xl-7">
+                                <div className="text-color-change">
+                                    <h2 className="text-uppercase text">
+                                        Plan Your Visit Around
+                                        Our Opening Hours
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="tf-container">
+                    <div className="row">
+                        <div className="col-md-6">
+                            <div className="provide-item wow fadeInUp">
+                                <img className="image" src="/image/home/timing.webp" alt="Gym Hours" />
+                                <div className="h3 title">Gym Hours</div>
+                                <p className="text">Monday to Saturday, 5:30 AM – 9:30 PM. Closed Sundays.</p>
+                            </div>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="provide-item wow fadeInUp" data-wow-delay=".1s">
+                                <img className="image" src="/image/home/ladies.webp" alt="Ladies Special Hours" />
+                                <div className="h3 title">Ladies Special Hours</div>
+                                <p className="text">11:00 AM – 4:00 PM, in a dedicated women-friendly environment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* /section-timing */}
+
+        
+            {/* section-testimonial-1 */}
+            <TestimonialsSection />
+            {/* /section-testimonial-1 */}
+            {/* /section-testimonial-1 */}
+
+            <BmiSection />
+
+            {/* section-cta */}
+            <section className="section-cta tf-spacing-4">
+                <div className="tf-container z-5">
+                    <div className="cta">
+                        <div className="content wow fadeInUp">
+                            <div className="text-1 sub">join elev8 today</div>
+                            <h2 className="title">Elevate Your Fitness Journey Today</h2>
+                            <p className="text">Join the only premium fitness center in the region and take the first step toward a stronger, healthier, more confident you.</p>
+                            <a href="contact" className="tf-btn style-black text-uppercase">Visit Us Today</a>
+                        </div>
+                        <div className="image wg-video wow fadeInUp" data-wow-delay=".1s">
+                            <img src="/image/home/video.webp" alt="image" />
+                            <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552876/reel1_qak4zb.mp4" className="popup-youtube">
+                                <i className="icon icon-play"></i>
+                                <div className="wave"></div>
+                                <div className="wave"></div>
+                                <div className="wave"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div className="tf-marquee marquee-2">
+                    <div className="marquee-wrapper">
+                        <div className="initial-child-container">
+                            <div className="marquee-child-item">
+                                <div className="text">
+                                    <span className="text-Title">ELEV8</span>
+                                    <span className="text-gradient-2">FITNESS</span>
+                                </div>
+                            </div>
+                            <div className="marquee-child-item">
+                                <div className="text">
+                                    <span className="text-Title">ELEV8</span>
+                                    <span className="text-gradient-2">FITNESS</span>
+                                </div>
+                            </div>
+                            <div className="marquee-child-item">
+                                <div className="text">
+                                    <span className="text-Title">ELEV8</span>
+                                    <span className="text-gradient-2">FITNESS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            {/* /section-cta */}
+
         </div>
-      </main>
+
+        <Footer />
+        <Modals />
+      </div>
     </div>
   );
 }
