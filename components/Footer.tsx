@@ -21,7 +21,7 @@ const Footer = () => {
                         <div className="col-md-6">
                             <div className="footer-left">
                                 <div className="logo-footer">
-                                    <img src="/image/logo/logo-white.webp" alt="Elev8 Fitness Club" />
+                                    <img src="/image/logo/logo-white.webp" alt="Elev8 Fitness Club" className="footer-logo-img" />
                                 </div>
                                 <div className="footer-contact">
                                     <div className="line"></div>

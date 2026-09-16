@@ -1,13 +1,32 @@
 'use client';
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { services } from '@/data/services';
 
 
 const Modals = () => {
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Clean up Bootstrap offcanvas backdrops
+      const backdrops = document.querySelectorAll('.offcanvas-backdrop, .modal-backdrop');
+      backdrops.forEach((b) => b.remove());
+      
+      // Restore body scrolling
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+      document.body.classList.remove('modal-open');
+      
+      // Hide any open offcanvas elements
+      const openOffcanvas = document.querySelectorAll('.offcanvas.show');
+      openOffcanvas.forEach((el) => {
+        el.classList.remove('show');
+      });
+    }
+  }, [pathname]);
 
   const isActive = (path: string) => {
     if (path === '/') return pathname === '/';

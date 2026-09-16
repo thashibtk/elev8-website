@@ -130,3 +130,19 @@
     line-height: 1.4 !important;
   }
 }
+
+/* Footer Logo Sizing */
+.footer-logo-img {
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-img {
+    max-width: 200px;
+  }
+}
+
+.footer .footer-inner .logo-footer {
+  margin-left: 0 !important;
+}
