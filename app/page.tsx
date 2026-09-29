@@ -28,7 +28,7 @@ export default function Home() {
                     <div className="text-bg text-anime">Elevate Your Journey</div>
                     <div className="left">
                         <div className="text h4 mb-30 wow fadeInUp">we are dedicated to helping you achieve your fitness goals in a safe, motivating environment for men and women alike.</div>
-                        <a href="contact" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".1s">Visit Us Today</a>
+                        <Link href="contact" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".1s">Visit Us Today</Link>
                         <div className="text h4 mb-20 wow fadeInUp" data-wow-delay=".2s">the only premium fitness center in the region</div>
                         <div className="list-text wow fadeInUp" data-wow-delay=".3s">
                             <div className="text-item">Cardio</div>
