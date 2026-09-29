@@ -99,7 +99,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                         <img src="/image/banner/service-cta.webp" alt="Elev8 Fitness Club" />
                         <div className="content">
                           <h3 className="title">Don't Wait — Start Training Now!</h3>
-                          <a href="/contact" className="tf-btn">JOIN NOW</a>
+                          <Link href="/contact" className="tf-btn">JOIN NOW</Link>
                         </div>
                       </div>
                     </div>

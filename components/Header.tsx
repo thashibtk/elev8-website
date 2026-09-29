@@ -78,7 +78,7 @@ const Header = () => {
                 </a>
               </div>
               <div className="mobile-button nav-btn d-xl-none">
-                <a href="#canvasMobile" data-bs-toggle="offcanvas">
+                <a href="#canvasMobile" data-bs-toggle="offcanvas" aria-label="Open Mobile Menu">
                   <span></span>
                   <span></span>
                   <span></span>
@@ -115,7 +115,7 @@ const Header = () => {
                 </a>
               </div>
               <div className="mobile-button style-white nav-btn d-xl-none">
-                <a href="#canvasMobile" data-bs-toggle="offcanvas">
+                <a href="#canvasMobile" data-bs-toggle="offcanvas" aria-label="Open Mobile Menu">
                   <span></span>
                   <span></span>
                   <span></span>

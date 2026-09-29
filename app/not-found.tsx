@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Modals from '../components/Modals';
@@ -25,7 +26,7 @@ export default function Page() {
                 <div className="text">
                   Sorry, we couldn't find your page.
                 </div>
-                <a href="/" className="tf-btn style-black text-uppercase wow fadeInUp">back to home</a>
+                <Link href="/" className="tf-btn style-black text-uppercase wow fadeInUp">back to home</Link>
               </div>
             </div>
           </div>

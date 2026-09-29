@@ -166,6 +166,7 @@ export default function BmiSection() {
                   
                   <fieldset>
                     <select
+                      aria-label="Gender"
                       className="style-4 w-100"
                       value={gender}
                       onChange={(e) => setGender(e.target.value)}
@@ -188,6 +189,7 @@ export default function BmiSection() {
 
                 <div className="mb-20">
                   <select
+                    aria-label="Activity Level"
                     className="style-4 w-100"
                     value={activity}
                     onChange={(e) => setActivity(e.target.value)}

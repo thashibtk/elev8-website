@@ -178,7 +178,7 @@ export default function Page() {
                             <div className="text-item text-Paragraph" key={feature}>{feature}</div>
                           ))}
                         </div>
-                        <Link href={`/services/${service.slug}`} className="tf-btn-default">
+                        <Link href={`/services/${service.slug}`} className="tf-btn-default" aria-label={`Read more about ${service.title}`}>
                           READ MORE
                           <i className="icon icon-arrow-right" />
                         </Link>
@@ -194,7 +194,7 @@ export default function Page() {
               <div className="tf-container">
                 <div className="wg-video box-video">
                   <img src="/image/banner/thumbnail.webp" alt="image" />
-                  <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552852/reel3_goju8o.mp4" className="popup-youtube">
+                  <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552852/reel3_goju8o.mp4" className="popup-youtube" aria-label="Play Video">
                     <i className="icon icon-play" />
                     <div className="wave" />
                     <div className="wave" />

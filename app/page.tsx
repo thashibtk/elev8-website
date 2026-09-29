@@ -42,7 +42,7 @@ export default function Home() {
                     <div className="right">
                         <div className="wg-video wow fadeInRight">
                             <img src="/image/home/video.webp" alt="image" />
-                            <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552852/reel2_k2lxou.mp4" className="popup-youtube">
+                            <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552852/reel2_k2lxou.mp4" className="popup-youtube" aria-label="Play Video">
                                 <i className="icon icon-play"></i>
                                 <div className="wave"></div>
                                 <div className="wave"></div>
@@ -181,7 +181,7 @@ export default function Home() {
                                     <div className="text-item">Experienced, Certified Trainers</div>
                                     <div className="text-item">Steam Bath for Recovery</div>
                                 </div>
-                                <a href="about-us" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".2s">learn more about us</a>
+                                <Link href="about-us" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".2s">learn more about us</Link>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -330,7 +330,7 @@ export default function Home() {
                                 <div className="image">
                                     <img src="/image/home/strength.webp" alt="image" />
                                 </div>
-                                <a href="portfolio-details" className="h3 title text-uppercase text-Black link">Strength & Conditioning Zone</a>
+                                <div className="h3 title text-uppercase text-Black link">Strength & Conditioning Zone</div>
                             </div>
                         </div>
                         <div className="col-md-6">
@@ -350,39 +350,39 @@ export default function Home() {
                             }`}>
                                 <div className="swiper-wrapper">
                                     <div className="swiper-slide">
-                                        <a href="portfolio-details" className="gallery-item hover-img wow fadeInUp" data-wow-delay=".1s">
+                                        <div className="gallery-item hover-img wow fadeInUp" data-wow-delay=".1s">
                                             <div className="image">
                                                 <img src="/image/portfolio/5.webp" alt="image" />
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="swiper-slide">
-                                        <a href="portfolio-details" className="gallery-item hover-img wow fadeInUp" data-wow-delay=".2s">
+                                        <div className="gallery-item hover-img wow fadeInUp" data-wow-delay=".2s">
                                             <div className="image">
                                                 <img src="/image/portfolio/14.webp" alt="image" />
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="swiper-slide">
-                                        <a href="portfolio-details" className="gallery-item hover-img">
+                                        <div className="gallery-item hover-img">
                                             <div className="image">
                                                 <img src="/image/portfolio/13.webp" alt="image" />
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="swiper-slide">
-                                        <a href="portfolio-details" className="gallery-item hover-img">
+                                        <div className="gallery-item hover-img">
                                             <div className="image">
                                                 <img src="/image/portfolio/16.webp" alt="image" />
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                     <div className="swiper-slide">
-                                        <a href="portfolio-details" className="gallery-item hover-img">
+                                        <div className="gallery-item hover-img">
                                             <div className="image">
                                                 <img src="/image/portfolio/12.webp" alt="image" />
                                             </div>
-                                        </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -457,11 +457,11 @@ export default function Home() {
                             <div className="text-1 sub">join elev8 today</div>
                             <h2 className="title">Elevate Your Fitness Journey Today</h2>
                             <p className="text">Join the only premium fitness center in the region and take the first step toward a stronger, healthier, more confident you.</p>
-                            <a href="contact" className="tf-btn style-black text-uppercase">Visit Us Today</a>
+                            <Link href="contact" className="tf-btn style-black text-uppercase">Visit Us Today</Link>
                         </div>
                         <div className="image wg-video wow fadeInUp" data-wow-delay=".1s">
                             <img src="/image/home/video.webp" alt="image" />
-                            <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552876/reel1_qak4zb.mp4" className="popup-youtube">
+                            <a href="https://res.cloudinary.com/dtis6nnx3/video/upload/v1789552876/reel1_qak4zb.mp4" className="popup-youtube" aria-label="Play Video">
                                 <i className="icon icon-play"></i>
                                 <div className="wave"></div>
                                 <div className="wave"></div>

@@ -40,9 +40,9 @@ const Modals = () => {
             <div className="inner-mobile-nav">
                 <div className="top-header-mobi">
                     <div className="logo-mobile">
-                        <a href="/">
+                        <Link href="/">
                             <img src="/image/logo/logo-black.webp" alt="Elev8 Fitness Club" />
-                        </a>
+                        </Link>
                     </div>
                     <button className="mobile-nav-close" data-bs-dismiss="offcanvas" aria-label="Close">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="black" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 122.878 122.88" enableBackground="new 0 0 122.878 122.88" xmlSpace="preserve">

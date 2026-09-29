@@ -56,7 +56,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <title>Elev8 Fitness Club</title>
         <meta name="author" content="themesflat.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* Favicon and Touch Icons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/image/logo/apple-touch-icon.png" />
@@ -77,7 +77,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/font/fonts.css" />
       </head>
       <body className="" suppressHydrationWarning>
-                {children}
+        <main>{children}</main>
 
         {/* Javascript */}
         <Script src="/js/jquery.min.js" strategy="beforeInteractive"></Script>

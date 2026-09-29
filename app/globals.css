@@ -146,3 +146,21 @@
 .footer .footer-inner .logo-footer {
   margin-left: 0 !important;
 }
+
+/* Accessibility: Increase Swiper pagination touch targets to at least 48x48 */
+.swiper-pagination-bullet {
+  position: relative !important;
+}
+.swiper-pagination-bullet::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+}

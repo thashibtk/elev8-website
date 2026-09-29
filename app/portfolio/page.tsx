@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -33,7 +34,7 @@ export default function Page() {
                 <div className="row justify-content-center">
                   <div className="col-md-10">
                     <div className="breadkcum">
-                      <a href="/" className="link-breadkcum breadkcum-item">Home</a>
+                      <Link href="/" className="link-breadkcum breadkcum-item">Home</Link>
                       <span className="dot" />
                       <div className="page-breadkcum breadkcum-item">photo gallery</div>
                     </div>
