@@ -119,7 +119,7 @@ const Footer = () => {
             </div>
             <div className="bottom">
                 <p className="text">Copyright © 2026 <Link href="/" className="text-Neon fw-semibold link">ELEV8 FITNESS CLUB</Link> . All Rights Reserved.</p>
-                <p className="text">Powered By <Link href="https://www.linkedin.com/in/thashibtk" className="text-Neon fw-semibold link">Thashib Tk</Link></p>
+                <p className="text">Powered By <Link href="https://www.boomspace.co" className="text-Neon fw-semibold link">Boomspace</Link></p>
                 
             </div>
         </footer>
