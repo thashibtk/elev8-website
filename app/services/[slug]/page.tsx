@@ -123,7 +123,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                       </div>
                       <hr className="mb-50 mt-50" style={{ border: 0, height: '1px', background: 'linear-gradient(90deg, var(--Neon) 0%, rgba(255,255,255,0.1) 50%, transparent 100%)' }} />
                       <h2 className="title text-Title text-uppercase mb-20 mt-50">
-                        The only premium fitness center in the region.
+                        The only premium fitness center in Edakkara.
                       </h2>
                       <div className="text text-Paragraph mb-40">
                         Elev8 is a unisex gym that welcomes both men and women in a safe, comfortable, women friendly

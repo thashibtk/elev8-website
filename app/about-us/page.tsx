@@ -97,11 +97,11 @@ export default function Page() {
                           <div className="tab-pane" id="tabvision" role="tabpanel">
                             <div className="tab-mission-vision-content">
                               <div className="text">
-                                To be the region's leading premium fitness destination the place people trust for
+                                To be the Edakkara's leading premium fitness destination the place people trust for
                                 real, world class results, whatever their goal or fitness level.
                               </div>
                               <div className="list-text">
-                                <div className="text-item">The Only Premium Gym in the Region</div>
+                                <div className="text-item">The Only Premium Gym in Edakkara</div>
                                 <div className="text-item">Certified, Experienced Trainers</div>
                                 <div className="text-item">A Space Built for Everyone</div>
                               </div>

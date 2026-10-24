@@ -131,7 +131,7 @@ const Modals = () => {
                 </button>
             </div>
             <div className="desc">
-                The only premium fitness center in the region unisex, women-friendly, and equipped with imported, high-quality machines.
+                The only premium fitness center in Edakkara. unisex, women-friendly, and equipped with imported, high-quality machines.
             </div>
 
             <div className="contact-mega-menu meag-menu-item">

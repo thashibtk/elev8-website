@@ -29,7 +29,7 @@ export default function Home() {
                     <div className="left">
                         <div className="text h4 mb-30 wow fadeInUp">we are dedicated to helping you achieve your fitness goals in a safe, motivating environment for men and women alike.</div>
                         <Link href="contact" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".1s">Visit Us Today</Link>
-                        <div className="text h4 mb-20 wow fadeInUp" data-wow-delay=".2s">the only premium fitness center in the region</div>
+                        <div className="text h4 mb-20 wow fadeInUp" data-wow-delay=".2s">the only premium fitness center in Edakkara</div>
                         <div className="list-text wow fadeInUp" data-wow-delay=".3s">
                             <div className="text-item">Cardio</div>
                             <div className="text-item">Strength</div>
@@ -169,7 +169,7 @@ export default function Home() {
                                 <div className="text-1 text-uppercase box-gradient-2 sub-title text-Title text-anime">about elev8 fitness club</div>
                                 <div className="text-color-change title">
                                     <h2 className="text-uppercase">
-                                        The only premium fitness center in the region, built for real, world class results.
+                                        The only premium fitness center in Edakkara, built for real, world class results.
                                     </h2>
                                 </div>
                                 <div className="text wow fadeInUp">Elev8 is a unisex gym that welcomes both men and women in a safe, comfortable, and women friendly environment. Equipped with imported, high quality machines for strength, cardio, and functional fitness, our experienced, certified trainers help every member achieve serious results whether your goal is building muscle, losing weight, or improving overall fitness.</div>
@@ -456,7 +456,7 @@ export default function Home() {
                         <div className="content wow fadeInUp">
                             <div className="text-1 sub">join elev8 today</div>
                             <h2 className="title">Elevate Your Fitness Journey Today</h2>
-                            <p className="text">Join the only premium fitness center in the region and take the first step toward a stronger, healthier, more confident you.</p>
+                            <p className="text">Join the only premium fitness center in Edakkara and take the first step toward a stronger, healthier, more confident you.</p>
                             <Link href="contact" className="tf-btn style-black text-uppercase">Visit Us Today</Link>
                         </div>
                         <div className="image wg-video wow fadeInUp" data-wow-delay=".1s">
