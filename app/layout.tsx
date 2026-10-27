@@ -14,17 +14,27 @@ const geistMono = Geist_Mono({
 });
 
 
+const SITE_URL = 'https://elev8fitnessclub.in';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Elev8 Fitness Club | The Premium Fitness Center',
+    default: 'Elev8 Fitness Club | Premium Gym in Edakkara, Nilambur',
     template: '%s | Elev8 Fitness Club'
   },
-  description: 'The only premium fitness center in the Edakkara, built for real, world-class results. Join Elev8 for Personal Training, CrossFit, and more.',
-  keywords: ['gym', 'fitness club', 'personal training', 'crossfit', 'workout', 'strength training', 'elev8 fitness'],
+  description: 'Elev8 Fitness Club is the only premium unisex gym in Edakkara, near Nilambur, Malappuram. Personal training, cardio, strength, CrossFit, diet plans, steam bath and ladies special hours.',
+  keywords: [
+    'Elev8', 'Elev8 Fitness Club', 'Elev8 gym', 'gym in Edakkara', 'gym in Nilambur', 'premium gym in Edakkara',
+    'fitness center Edakkara', 'gym near me', 'ladies gym Edakkara', 'unisex gym Nilambur', 'gym in Malappuram',
+    'personal training', 'crossfit', 'strength training', 'cardio training', 'steam bath',
+  ],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Elev8 Fitness Club',
-    description: 'The only premium fitness center in the Edakkara, built for real, world-class results.',
-    url: 'https://elev8fitness.com',
+    title: 'Elev8 Fitness Club | Premium Gym in Edakkara, Nilambur',
+    description: 'The only premium unisex gym in Edakkara, near Nilambur. Personal training, CrossFit, strength, cardio and steam bath.',
+    url: SITE_URL,
     siteName: 'Elev8 Fitness Club',
     images: [
       {
@@ -34,15 +44,51 @@ export const metadata: Metadata = {
         alt: 'Elev8 Fitness Club Logo',
       }
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Elev8 Fitness Club',
-    description: 'The only premium fitness center in the Edakkara, built for real, world-class results.',
+    title: 'Elev8 Fitness Club | Premium Gym in Edakkara, Nilambur',
+    description: 'The only premium unisex gym in Edakkara, near Nilambur. Personal training, CrossFit, strength, cardio and steam bath.',
     images: ['/image/logo/logo.png'],
   },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ExerciseGym',
+  '@id': `${SITE_URL}/#gym`,
+  name: 'Elev8 Fitness Club',
+  alternateName: ['Elev8', 'Elev8 Gym', 'Elev8 Fitness'],
+  description: 'The only premium unisex gym in Edakkara, near Nilambur, Malappuram, Kerala.',
+  url: SITE_URL,
+  logo: `${SITE_URL}/image/logo/logo.png`,
+  image: `${SITE_URL}/image/home/hero1.png`,
+  telephone: '+91-7034201452',
+  priceRange: '₹₹',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Near Chicking, Munda PO',
+    addressLocality: 'Edakkara',
+    addressRegion: 'Kerala',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 11.3627071,
+    longitude: 76.3208911,
+  },
+  areaServed: ['Edakkara', 'Nilambur', 'Munda', 'Malappuram'],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '05:30',
+      closes: '21:30',
+    },
+  ],
+  sameAs: ['https://www.instagram.com/elev8_fitnessclub/'],
 };
 
 export default function RootLayout({
@@ -53,11 +99,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta charSet="utf-8" />
-        <title>Elev8 Fitness Club</title>
-        <meta name="author" content="themesflat.com" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
         {/* Favicon and Touch Icons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/image/logo/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/image/logo/favicon-32x32.png" />
@@ -77,6 +118,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="/font/fonts.css" />
       </head>
       <body className="" suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }}
+        />
         <main>{children}</main>
 
         {/* Javascript */}

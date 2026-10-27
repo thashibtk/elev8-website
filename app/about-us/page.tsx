@@ -8,7 +8,10 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn more about Elev8 Fitness Club, our mission, world-class facilities, and the team dedicated to helping you achieve your fitness goals.',
+  description: 'Learn about Elev8 Fitness Club, the premium unisex gym in Edakkara, near Nilambur: our mission, imported equipment, certified trainers and women-friendly environment.',
+  alternates: {
+    canonical: '/about-us',
+  },
 };
 
 export default function Page() {

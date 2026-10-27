@@ -8,7 +8,10 @@ import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Elev8 Fitness Club. Find our location, contact details, and send us a message to start your fitness journey today.',
+  description: 'Contact Elev8 Fitness Club, near Chicking, Munda PO, Edakkara (near Nilambur). Call +91 7034 201 452. Open Mon–Sat, 5:30 AM – 9:30 PM.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function Page() {

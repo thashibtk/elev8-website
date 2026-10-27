@@ -8,7 +8,10 @@ import PortfolioGallery from '@/components/PortfolioGallery';
 
 export const metadata: Metadata = {
   title: 'Photo Gallery',
-  description: 'View photos from Elev8 Fitness Club, showcasing our premium equipment, training sessions, and world-class facilities.',
+  description: 'Photos of Elev8 Fitness Club, the premium gym in Edakkara, Nilambur, showcasing our imported equipment, training zones and facilities.',
+  alternates: {
+    canonical: '/portfolio',
+  },
 };
 
 export default function Page() {

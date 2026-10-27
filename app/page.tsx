@@ -9,8 +9,13 @@ import BmiSection from '@/components/BmiSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 
 export const metadata: Metadata = {
-  title: 'Home | Elev8 Fitness Club',
-  description: 'Welcome to Elev8 Fitness Club. Discover premium equipment, world-class trainers, and an exclusive fitness community designed for real results.',
+  title: {
+    absolute: 'Elev8 Fitness Club | Premium Gym in Edakkara, Nilambur',
+  },
+  description: 'Elev8 Fitness Club is the only premium unisex gym in Edakkara, near Nilambur, Malappuram. Personal training, cardio, strength, CrossFit, diet plans, steam bath and ladies special hours.',
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function Home() {
@@ -29,7 +34,7 @@ export default function Home() {
                     <div className="left">
                         <div className="text h4 mb-30 wow fadeInUp">we are dedicated to helping you achieve your fitness goals in a safe, motivating environment for men and women alike.</div>
                         <Link href="contact" className="tf-btn flex-shrink-0 text-uppercase wow fadeInUp" data-wow-delay=".1s">Visit Us Today</Link>
-                        <div className="text h4 mb-20 wow fadeInUp" data-wow-delay=".2s">the only premium fitness center in Edakkara</div>
+                        <h1 className="text h4 mb-20 wow fadeInUp" data-wow-delay=".2s">the only premium fitness center in Edakkara</h1>
                         <div className="list-text wow fadeInUp" data-wow-delay=".3s">
                             <div className="text-item">Cardio</div>
                             <div className="text-item">Strength</div>
@@ -37,7 +42,7 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="image tf-animate-2">
-                        <img src="/image/home/hero1.png" alt="image" className="" />
+                        <img src="/image/home/hero1.png" alt="Elev8 Fitness Club, premium gym in Edakkara, Nilambur" className="" />
                     </div>
                     <div className="right">
                         <div className="wg-video wow fadeInRight">

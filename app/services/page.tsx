@@ -9,7 +9,10 @@ import BmiSection from '@/components/BmiSection';
 
 export const metadata: Metadata = {
   title: 'Our Services',
-  description: 'Explore the premium fitness services offered at Elev8 Fitness Club including Personal Training, CrossFit, Strength Training, and more.',
+  description: 'Gym services at Elev8 Fitness Club, Edakkara: personal training, cardio, strength training, CrossFit, diet & weight control and steam bath, near Nilambur.',
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 export default function Page() {

@@ -20,8 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
   
   return {
-    title: service.title,
-    description: service.tagline,
+    title: `${service.title} in Edakkara, Nilambur`,
+    description: `${service.tagline} ${service.title} at Elev8 Fitness Club, the premium gym in Edakkara, near Nilambur.`,
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
     openGraph: {
       title: `${service.title} | Elev8 Fitness Club`,
       description: service.tagline,

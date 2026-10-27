@@ -1,8 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Modals from '@/components/Modals';
+
+export const metadata: Metadata = {
+  title: 'FAQs',
+  description: 'Answers to common questions about Elev8 Fitness Club, the premium gym in Edakkara, near Nilambur: timings, ladies special hours, personal training, fees and more.',
+  alternates: {
+    canonical: '/faqs',
+  },
+};
 
 export default function Page() {
   return (
